@@ -10,3 +10,4 @@ function DNAtoRNA(dna) {
     let rna = dna.replaceAll('T', 'U');
     return rna;
   }
+
