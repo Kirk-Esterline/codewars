@@ -75,3 +75,32 @@ function productFib(prod){
 
 
   // My second attempt is planned to use an existig array of fib numbers rather than trying to calculated the numbers on the fly. 
+  
+
+  // initialize an array of fib numbers
+// initialize number
+// while loop: number <= prod 
+// number = fib[i] * fib[i + 1]
+// if number === prod ? true : false
+// return array of numbers and tOrF
+
+function productFib(prod){
+    let fibNums = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+    let number = 1
+    let i = 1
+    let n1 
+    let n2
+    let answerArray = []
+    let tOrF
+    while (number < prod) {
+      number = fibNums[i] * fibNums[i - 1]
+      n1 = fibNums[i - 1]
+      n2 = fibNums[i]
+      i++
+    }
+    number === prod ? tOrF = true : tOrF = false
+    answerArray.push(n1, n2, tOrF)
+    return answerArray
+  }
+
+  // *** On the right track.  As long as the numbers are small enough to end up within the declared array the tests work.  However, the test go beyoud my array and thus declarring an array is a bit impractical.
