@@ -104,3 +104,32 @@ function productFib(prod){
   }
 
   // *** On the right track.  As long as the numbers are small enough to end up within the declared array the tests work.  However, the test go beyoud my array and thus declarring an array is a bit impractical.
+
+
+// ######### Here is the solution that finally worked.  It is 99% the same as the first solution, except that the while loop only runs while the number is < prod.  Realized on attempt number 2 that the logic of '<=' what flawed and would cause the loop to run one more time than needed.  Must also admit that I don't fully understand how this ended up working.  In testing the function found this combination of n1, n2, increment to produce the correct answers.  But as yet don't quite understand my own logic of how it got there.  I'll keep pondering on it. 
+
+  // while number <= prod
+// declare 2 numbers n1 and n2
+// number = n1 * n2
+// if (n1 * n2 < prod) {n1 = n2 & n2 += n1}
+// let tOrF if number === prod ? true : false
+// return [n1, n2, tOrF]
+
+function productFib(prod){
+    let number = 1
+    let n1 = 1
+    let n2 = 2
+    let answerArray = []
+    let tOrF
+    let increment = n1
+    while (number <= prod) {
+      increment = n1
+      n1 = n2
+      n2 += increment
+      number = increment * n1
+    }
+    number === prod ? tOrF = true : tOrF = false
+    answerArray.push(increment, n1, tOrF)
+    return answerArray
+  }
+
