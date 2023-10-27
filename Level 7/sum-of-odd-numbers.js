@@ -24,3 +24,5 @@ Calculate the sum of the numbers in the nth row of this triangle (starting at in
 function rowSumOddNumbers(n) {
 	return n * Math.pow(n,2)
 }
+
+// I feel like a stumbled onto the elegant mathmatical solution.  I was trying to build the pyrimid withh loops with minimal success and on a hunch found the answer.
