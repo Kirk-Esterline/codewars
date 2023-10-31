@@ -34,6 +34,6 @@ function alphabetPosition(text) {
     return numbers.filter(item => item > 0).join(' ');
   }
 
-// Things I learned
+// ********  Things I learned   ********
 // To be careful about the value type.  Had issues because values were being returned as numbers not as strings which they should have been
 // Check casing first.  Answers were throughing me for a loop until I realized they didn't make sense because the were 'false'
