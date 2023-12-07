@@ -46,3 +46,17 @@ function howMuchILoveYou(nbPetals) {
           return 'not at all';
     }
 }
+
+// Here is an interesting solution from the solutions. The interesting part is how it controls for pettal counts greater than 6.  It uses % which is something I didn't expect.
+
+function howMuchILoveYou(nbPetals) {
+  let phrases = [
+    'I love you',
+    'a little',
+    'a lot',
+    'passionately',
+    'madly',
+    'not at all'
+  ]  
+  return phrases[(nbPetals - 1) % 6]
+}
