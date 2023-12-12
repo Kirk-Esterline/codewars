@@ -33,3 +33,14 @@ const sequenceSum = (begin, end, step) => {
       return sequence.reduce((acc,c) => acc + c, 0)
     }
   };
+
+  // Here is a refactored solution after looking at the common solutions.  This solutions uses a for loop which eliminates the need to check the value of begin, and no longer requires finding the "sequence" as it is done automatically in the for loop.
+  // try with a for loop
+
+const anotherSequenceSum = (begin, end, step) => {
+    let result = 0
+    for (let i = begin; i <= end; i += step) {
+      result += i
+    }
+    return result
+  };
