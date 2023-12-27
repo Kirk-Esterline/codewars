@@ -22,3 +22,9 @@ function remove (string) {
         return string
       }
   }
+
+// Here is a clever and clean way of achiveing the same result
+
+function remove (string) {
+    return string.endsWith('!') ? string.slice(0, -1) : string
+}
